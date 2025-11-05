@@ -9,22 +9,13 @@ This repository supports:
 
 If you encounter any issues setting up the repo, please feel free to [reach out to us on Discord](https://discord.gg/PgcMpQTzh5).
 
-## Common
-
-Clone the repository:
+## Clone the repository:
 ```sh
 git clone https://github.com/pmret/papermario
 cd papermario
 ```
 
-Install pigment64 (our image-processing tool)
-```sh
-curl https://sh.rustup.rs -sSf | sh
-cargo install pigment64
-```
-and make sure pigment64 is in your system path.
-
-## Unix
+### Unix
 
 Install build dependencies:
 ```sh
@@ -45,7 +36,7 @@ Install build dependencies:
 
 Continue onto [building](#building)
 
-## WSL 2
+### WSL 2
 
 1. Install or upgrade to **WSL 2** following [these instructions](https://aka.ms/wsl2-install) (Ubuntu is recommended)
 2. Open a WSL terminal
@@ -60,7 +51,7 @@ Continue onto [building](#building)
 If you have Visual Studio Code, you can type `code .` to open the repo within it.
 `Ctrl + J` opens up a Linux terminal within VS Code.
 
-## Nix
+### Nix
 
 1. Install [Nix](https://nixos.org/download.html)
 1. [Enable nix-command and flakes experimental features](https://nix.dev/manual/nix/2.25/command-ref/conf-file#conf-experimental-features)
@@ -73,7 +64,14 @@ If you have Visual Studio Code, you can type `code .` to open the repo within it
 4. Enter a shell with `nix develop`
 5. Continue with [building](#building) (ignore baserom instructions)
 
-# Building
+## Install pigment64 (our image-processing tool)
+```sh
+curl https://sh.rustup.rs -sSf | sh
+cargo install pigment64
+```
+and make sure pigment64 is in your system path.
+
+## Building
 
 Copy baseroms into the following places (at least 1 is required):
 
@@ -95,4 +93,3 @@ ninja
 ```
 
 If you get `papermario.z64: OK` at the end, the build succeeded and the built rom matches the input rom!
-
