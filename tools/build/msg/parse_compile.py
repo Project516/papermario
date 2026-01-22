@@ -3253,7 +3253,7 @@ if __name__ == "__main__":
                 messages.append(message)
 
                 font = 0
-                
+
                 if version == "jp":
                     charset = CHARSET_KANA
                 elif version == "ique":
