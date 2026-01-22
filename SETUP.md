@@ -26,22 +26,12 @@ and make sure pigment64 is in your system path.
 
 ## Unix
 
-Install build dependencies:
+Install build dependencies. See [DEPENDENCIES.md](DEPENDENCIES.md) for detailed instructions on installing dependencies for your specific platform.
+
+After installing dependencies, install the compilers:
 ```sh
-./install_deps.sh
 ./install_compilers.sh
 ```
-
-> **NOTE:** On Mac, if you get an error that looks like
->
->```sh
->Error: Cannot install md5sha1sum because conflicting formulae are installed.
->  coreutils: because both install `md5sum` and `sha1sum` binaries
->
->Please `brew unlink coreutils` before continuing.
->```
->
->it's fine to just open `install_deps.sh` in a text editor, delete the `md5sha1sum` from the `brew install` line, and rerun it (put it back after so you don't accidentally commit it!)
 
 Continue onto [building](#building)
 
@@ -50,12 +40,12 @@ Continue onto [building](#building)
 1. Install or upgrade to **WSL 2** following [these instructions](https://aka.ms/wsl2-install) (Ubuntu is recommended)
 2. Open a WSL terminal
 3. Run the following command: `sudo apt update && sudo apt upgrade && cd ~`
-4. Install build dependencies:
+4. Install build dependencies. See [DEPENDENCIES.md](DEPENDENCIES.md) for detailed instructions on installing dependencies.
+5. Install the compilers:
 ```sh
-./install_deps.sh
 ./install_compilers.sh
 ```
-5. Continue with [building](#building)
+6. Continue with [building](#building)
 
 If you have Visual Studio Code, you can type `code .` to open the repo within it.
 `Ctrl + J` opens up a Linux terminal within VS Code.
